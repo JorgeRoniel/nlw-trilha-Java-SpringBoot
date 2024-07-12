@@ -1,0 +1,9 @@
+CREATE TABLE activities (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    occurs_at TIMESTAMP NOT NULL,
+    trip_id INTEGER,
+
+    FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE
+
+);
